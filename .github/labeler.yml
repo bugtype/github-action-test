@@ -1,9 +1,6 @@
-label1:
-- any: ['example1/*']
-
-
 label2:
 - any: ['example1/*']
-
-no-label:
+label1:
+- any: ['example1/*']
+noLabel:
 - any: ['example1/*']
