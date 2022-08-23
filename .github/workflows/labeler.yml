@@ -1,12 +1,11 @@
 name: "Pull Request Labeler"
 on:
-  pull_request:
-    types: [opened]
+  push:
     branches:
-      - release/*
+      - 'release/**'
 
 jobs:
-  triage:
+  auto-labeler:
     permissions:
       contents: read
       pull-requests: write
