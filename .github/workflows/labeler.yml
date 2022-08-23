@@ -14,4 +14,6 @@ jobs:
     steps:
     - uses: TimonVS/pr-labeler-action@v3
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/labeler.yml # optional, .github/pr-labeler.yml is the default value
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
