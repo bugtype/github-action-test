@@ -2,7 +2,7 @@ name: "Pull Request Labeler"
 on:
   push:
     branches:
-      - 'releases/**'
+      - 'release/**'
 
 jobs:
   auto-labeler:
