@@ -1,0 +1,12 @@
+name: Branch Checker
+
+on:
+    pull_request:
+        branches:
+            - dev
+
+jobs:
+  checker:
+    runs-on: ubuntu-latest
+        if: ${{ !startsWith(github.event.inputs.from_branch, 'release/') }}
+        run: exit 1
