@@ -2,11 +2,11 @@ name: Branch Checker
 
 on:
     pull_request:
-        branches:
-            - dev
+      branches: [ dev ]
 
 jobs:
-  checker:
+  checker-job:
     runs-on: ubuntu-latest
-        if: ${{ !startsWith(github.event.inputs.from_branch, 'release/') }}
-        run: exit 1
+    steps:
+        - if: "!startsWith(github.ref, 'refs/release/')"
+          run: exit 1
