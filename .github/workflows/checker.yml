@@ -10,5 +10,7 @@ jobs:
     steps:
       - name: branch-check
         run: echo ${{ github.head_ref }}
+      - if: ${{ startsWith(github.base_ref, 'master') }}
+        run: echo ${{ github.base_ref }}
       - if: "startsWith(github.base_ref, 'master') && startsWith(github.head_ref, 'release/')"
         run: exit 1
