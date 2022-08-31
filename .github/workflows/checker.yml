@@ -1,4 +1,4 @@
-name: Branch Checker
+name: Branch Checker2
 
 on:
     pull_request:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: branch
-      - if: "!startsWith(github.ref, 'release/')"
+      - if: "!startsWith(github.base_ref, 'release/')"
         run: |
           echo ${{ github.head_ref }}
           echo ${{ github.base_ref }}
