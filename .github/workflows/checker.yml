@@ -2,6 +2,7 @@ name: Branch Check
 
 on:
   pull_request:
+      branches: [ 'dev', 'release/**']
 
 jobs:
   checker-job:
