@@ -13,3 +13,5 @@ jobs:
           echo ${{ github.head_ref }}
           echo ${{ github.base_ref }}
           echo ${{ github.ref }}
+          echo ${{ github.event.pull_request.base.ref }}
+          
