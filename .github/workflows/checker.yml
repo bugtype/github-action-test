@@ -12,5 +12,5 @@ jobs:
         run: echo ${{ github.base_ref }}
       - if: ${{ startsWith(github.base_ref, 'master') }}
         run: echo ${{ github.head_ref }}
-      - if: ${{ startsWith(github.head_ref, 'release/') }}
+      - if: ${{ !startsWith(github.head_ref, 'release/') }}
         run: exit 1
