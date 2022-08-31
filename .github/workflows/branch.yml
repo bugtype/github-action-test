@@ -1,0 +1,14 @@
+name: Branch name
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: branch
+        run: |
+          echo ${{ github.head_ref }}
+          echo ${{ github.base_ref }}
