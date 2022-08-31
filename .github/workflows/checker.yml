@@ -5,7 +5,7 @@ on:
       branches: [ master, dev, release/** ]
 
 jobs:
-  checker-job:
+  checker-job2:
     runs-on: ubuntu-latest
     steps:
       - name: branch-check
