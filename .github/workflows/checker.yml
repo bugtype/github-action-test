@@ -7,10 +7,7 @@ jobs:
   checker-job:
     runs-on: ubuntu-latest
     steps:
-      - name: branch
+      - name: branch-check
+        run: echo ${{ github.base_ref }}
       - if: "!startsWith(github.base_ref, 'release/')"
-        run: |
-          echo ${{ github.head_ref }}
-          echo ${{ github.base_ref }}
-          echo ${{ github.ref }}
-          exit 1
+        run: exit 1
