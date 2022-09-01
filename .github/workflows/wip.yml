@@ -9,4 +9,5 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: wip/action@v1.0.0
+      - if: ${{ contains(github.event.pull_request.title, 'WIP') }}
+        run: exit 1
