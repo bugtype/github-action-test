@@ -6,10 +6,10 @@ on:
 jobs:
   wip:
     runs-on: ubuntu-latest
-    env:
-      PULL_REQUEST_TITLE: ${{ github.event.pull_request.title }}
     steps:
       - name: branch-check
+        run: |
+          echo "check title"
       - if: "!contains(github.event.pull_request.title, '[WIP]')"
         run: exit 1
 
