@@ -6,8 +6,6 @@ on:
 jobs:
   wip:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - if: ${{ contains(github.event.pull_request.title, 'WIP') }}
         run: exit 1
