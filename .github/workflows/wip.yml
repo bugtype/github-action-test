@@ -10,7 +10,9 @@ jobs:
       PULL_REQUEST_TITLE: ${{ github.event.pull_request.title }}
     steps:
       - name: branch-check
-        run: echo ${{ github.event.pull_request.title }}
+        run: |
+          echo ${{ github.event.pull_request.title }}
+          echo $PULL_REQUEST_TITLE
       - if: "!contains($PULL_REQUEST_TITLE, '[WIP]')"
         run: exit 1
 
