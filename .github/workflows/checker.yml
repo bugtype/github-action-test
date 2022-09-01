@@ -3,6 +3,7 @@ name: Branch Check
 on:
   pull_request:
       branches: [ master, dev, release/** ]
+      types : [ opend, synchronize ]
 
 jobs:
   checker-job2:
