@@ -14,4 +14,5 @@ jobs:
           echo ${{ github.base_ref }}
           echo ${{ github.ref }}
           echo ${{ github.event.pull_request.base.ref }}
+          echo ${{ github.event.pull_request.title }}
           
