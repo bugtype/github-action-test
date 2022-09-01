@@ -7,5 +7,7 @@ jobs:
   wip:
     runs-on: ubuntu-latest
     steps:
+      - name: branch-check
+        run: echo ${{ github.event.pull_request.title }}
       - if: ${{ contains(github.event.pull_request.title, 'WIP') }}
         run: exit 1
